@@ -22,7 +22,8 @@
     "test:functional": "yarn test:functional:pre && wdio tests/wdio.conf.js",
     "test:functional:pre": "rm -rf tests/public/dependencies && mkdir -p tests/public/dependencies && cp -r dist/ tests/public/dependencies/shortcut-buttons-flatpickr && cp -r node_modules/flatpickr/dist/ tests/public/dependencies/flatpickr",
     "watch:ts": "webpack --config build/webpack.config.ts --mode development --watch",
-    "watch:themes": "webpack --config build/webpack.themes.ts --mode development --watch"
+    "watch:themes": "webpack --config build/webpack.themes.ts --mode development --watch",
+    "run-s": "node_modules/npm-run-all/bin/run-s/index.js"
   },
   "repository": {
     "type": "git",
@@ -69,6 +70,7 @@
     "jsdom-global": "^3.0.2",
     "minimist": "^1.2.0",
     "mocha": "^6.2.0",
+    "npm-run-all": "^4.1.5",
     "nyc": "^14.1.1",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-loader": "^3.0.0",
